@@ -34,7 +34,7 @@ function Board () {
             const getData = async () => {
             // Se debe pasar la ciudad y la Key dada por la API para cada usuario que consuma la misma.
             // El proceso queda on hold hasta no recibir los datos de la API, para luego poder seguir.
-            let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=e238318f3dd4a4e1599919b9f3fbc192`)
+            let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.REACT_APP_API_KEY}`)
 
             // Requiero esperar para poder recibir los datos que envíe la API y convertirlos a un formato json, para poder luego utilizarlo como un Objeto Literal con key y valores.
             let data = await response.json();
@@ -76,7 +76,7 @@ function Board () {
             const getData = async () => {
                 // Se debe pasar la ciudad y la Key dada por la API para cada usuario que consuma la misma.
                 // El proceso queda on hold hasta no recibir los datos de la API, para luego poder seguir.
-                let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&units=metric&appid=e238318f3dd4a4e1599919b9f3fbc192`)
+                let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&units=metric&appid=${process.env.REACT_APP_API_KEY}`)
     
                 // Requiero esperar para poder recibir los datos que envíe la API y convertirlos a un formato json, para poder luego utilizarlo como un Objeto Literal con key y valores.
                 let data = await response.json();
