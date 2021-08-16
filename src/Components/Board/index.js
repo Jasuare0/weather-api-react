@@ -1,6 +1,11 @@
+// Importación de la librería de React Boostrap
 import Card from 'react-bootstrap/Card';
+// Importación de los componentes de React Boostrap
 import ListGroup from 'react-bootstrap/ListGroup';
 import ListGroupItem from 'react-bootstrap/ListGroupItem';
+
+// Importación Hooks
+import React,{useState,useEffect,useRef} from 'react';
 
 function Board () {
     return (
