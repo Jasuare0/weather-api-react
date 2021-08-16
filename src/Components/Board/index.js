@@ -8,19 +8,27 @@ import ListGroupItem from 'react-bootstrap/ListGroupItem';
 import React,{useState,useEffect,useRef} from 'react';
 
 function Board () {
+
+    // Valores Iniciales de los Estados del Componente
+    let [city,setCity] = useState('Buenos Aires');
+    let [country,setCountry] = useState('Argentina');
+    let [currentTemperature,setcurrentTemperature] = useState(25);
+    let [minimumTemperature,setMinimumTemperature] = useState(10);
+    let [maximumTemperature,setMaximumTemperature] = useState(20);
+
     return (
         <div>
 
             <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" src="" />
             <Card.Body>
-                <Card.Title>Buenos Aires</Card.Title>
+                <Card.Title>{city}, {country}</Card.Title>
                 <Card.Text>clear sky</Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
-                <ListGroupItem>°C</ListGroupItem>
-                <ListGroupItem>Max: °C</ListGroupItem>
-                <ListGroupItem>Min: °C</ListGroupItem>
+                <ListGroupItem><b>{currentTemperature}°C</b></ListGroupItem>
+                <ListGroupItem>Max: {maximumTemperature}°C</ListGroupItem>
+                <ListGroupItem>Min: {minimumTemperature}°C</ListGroupItem>
             </ListGroup>
             <Card.Body>
                 <Card.Link href="#">Card Link</Card.Link>
